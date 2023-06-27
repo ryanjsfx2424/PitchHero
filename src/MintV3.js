@@ -14,15 +14,8 @@ import {
   GridItem,
 } from '@chakra-ui/react'
 import Navbar from './Navbar'
-import wlt from './json/TEAM.json'
-import wlw from './json/WL.json'
-import nft3 from './images/PITCH_OGPASS_Brrrr_02_1.mp4'
-import nft2 from './images/PITCH_OGPASS_MatchDay_03_1.mp4'
-import nft1 from './images/PITCH_OGPASS_StreetPitch_03_1.mp4'
-import nft4 from './images/OGPass_1.mp4'
-import bkg1 from './images/PITCH_OGPASS_Streetpitch.jpg'
-import bkg2 from './images/PITCH_OGPASS_Matchday.jpg'
-import bkg3 from './images/PITCH_OGPASS_Brrrr.jpg'
+import wlt from './json/OG.json'
+import wlw from './json/WL_combined.json'
 
 //////////////////My test Trait
 import contractABI from './json/PitchHeroGoerliAbi2.json'
