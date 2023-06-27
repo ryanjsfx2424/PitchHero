@@ -330,9 +330,6 @@ const Mint = (trait) => {
     let needsNewToken = true;
     let tokenIdOptions = traits[trait];
     let tokenIds = [];
-    console.log("trait, ", trait);
-    console.log("traits[trait]: ", traits[trait]);
-    console.log("tokenIdOptions: ", tokenIdOptions);
     let tokenId;
     console.log("mintAmount: ", mintAmount)
     for (let iii = 0; iii < mintAmount; iii++) {
@@ -348,12 +345,10 @@ const Mint = (trait) => {
       tokenIds.push(tokenId);
       needsNewToken = true;
     }
-    console.log("tokenIds: ", tokenIds);
 
     let gasLimitEstimate
     let gasPriceEstimate
     let receipt
-    console.log('tokenId: ', tokenId)
     if (mintType === 'team') {
       try {
         gasLimitEstimate = await SmartContractObj.methods
@@ -639,75 +634,80 @@ const Mint = (trait) => {
           >
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Rockets} className="selectPicture" onClick={console.log("hiFromRockets")}/>
+              <button className='actualMintButton' onClick={() => handleMint(0)}>MINT</button>
               <Text>A.F.C. Rockets</Text>
-              
-              <button onClick={() => handleMint(0)}>Mint</button>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Black} className="selectPicture" />
+              <button className="actualMintButton" onClick={() => handleMint(1)}>MINT</button>              
               <Text>Black and White Dynamite</Text>
-              
-              <button onClick={() => handleMint(1)}>Mint</button>              
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
-              <Image src={Blue} className="selectPicture" />
+              <Image src={Blue} className="selectPicture" />             
+              <button className="actualMintButton" onClick={() => handleMint(2)}>Mint</button>
               <Text>Blue Thunder FC</Text>
-              
-              <button onClick={() => handleMint(2)}>Mint</button>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
-              <Image src={Victoria} className="selectPicture" />
+              <Image src={Victoria} className="selectPicture" />              
+              <button className="actualMintButton" onClick={() => handleMint(3)}>Mint</button>
               <Text>CF Victoria Blau-Grana</Text>
-              
-              <button onClick={() => handleMint(3)}>Mint</button>
+
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Cielo} className="selectPicture" />
-              <Text>Cielo Azzurro F.C.</Text>
               
-              <button onClick={() => handleMint(4)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(4)}>Mint</button>
+              <Text>Cielo Azzurro F.C.</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Diamon} className="selectPicture" />
-              <Text>Diamond Whites</Text>
               
-              <button onClick={() => handleMint(5)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(5)}>Mint</button>
+              <Text>Diamond Whites</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Dynamiet} className="selectPicture" />
-              <Text>Dynamiet Rood-Wit</Text>
               
-              <button onClick={() => handleMint(6)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(6)}>Mint</button>
+              <Text>Dynamiet Rood-Wit</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Estrellas} className="selectPicture" />
-              <Text>Estrelas Branco-Verde S.C.</Text>
               
-              <button onClick={() => handleMint(7)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(7)}>Mint</button>
+              <Text>Estrelas Branco-Verde S.C.</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Fortuna} className="selectPicture" />
-              <Text>FC Fortuna Koenigsrot</Text>
               
-              <button onClick={() => handleMint(8)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(8)}>Mint</button>
+              <Text>FC Fortuna Koenigsrot</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Groen} className="selectPicture" />
-              <Text>FC Groen-Wit Kracht</Text>
               
-              <button onClick={() => handleMint(9)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(9)}>Mint</button>
+              <Text>FC Groen-Wit Kracht</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Unione} className="selectPicture" />
-              <Text>FC Unione Blu e Nera</Text>
               
-              <button onClick={() => handleMint(10)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(10)}>Mint</button>
+              <Text>FC Unione Blu e Nera</Text>
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Force} className="selectPicture" />
-              <Text>Force Bleue FC</Text>
               
-              <button onClick={() => handleMint(11)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(11)}>Mint</button>
+              <Text>Force Bleue FC</Text>
             </Flex>
             {/* <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Grey} className="selectPicture" />
@@ -726,9 +726,10 @@ const Mint = (trait) => {
             </Flex> */}
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Luke} className="selectPicture" />
-              <Text>Luke's Legendary</Text>
               
-              <button onClick={() => handleMint(12)}>Mint</button>
+              
+              <button className="actualMintButton" onClick={() => handleMint(12)}>Mint</button>
+              <Text>Luke's Legendary</Text>
             </Flex>
             {/* <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Pale} className="selectPicture" />
@@ -737,26 +738,30 @@ const Mint = (trait) => {
             </Flex> */}
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Rayos} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(13)}>Mint</button>
               <Text>Rayos Blancos CF</Text>
-              <button onClick={() => handleMint(13)}>Mint</button>
               
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Dragons} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(14)}>Mint</button>
               <Text>Red Dragons FC</Text>
-              <button onClick={() => handleMint(14)}>Mint</button>
               
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Fury} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(15)}>Mint</button>
               <Text>Red Fury FC</Text>
-              <button onClick={() => handleMint(15)}>Mint</button>
               
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Royals} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(16)}>Mint</button>
               <Text>Red Royals United</Text>
-              <button onClick={() => handleMint(16)}>Mint</button>
               
             </Flex>
             {/* <Flex direction="column" align="centre" textAlign="center" gap={1}>
@@ -766,20 +771,23 @@ const Mint = (trait) => {
             </Flex> */}
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Fulmine} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(17)}>Mint</button>
               <Text>S.C. Fulmine Nero-Bianco</Text>
-              <button onClick={() => handleMint(17)}>Mint</button>
               
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Skyblue} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(18)}>Mint</button>
               <Text>Skyblue City Stars</Text>
-              <button onClick={() => handleMint(18)}>Mint</button>
               
             </Flex>
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={SV} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(19)}>Mint</button>
               <Text>SV Gelb-Schwarz</Text>
-              <button onClick={() => handleMint(19)}>Mint</button>
               
             </Flex>
             {/* <Flex direction="column" align="centre" textAlign="center" gap={1}>
@@ -789,8 +797,9 @@ const Mint = (trait) => {
             </Flex> */}
             <Flex direction="column" align="centre" textAlign="center" gap={1}>
               <Image src={Blank} className="selectPicture" />
+              
+              <button className="actualMintButton" onClick={() => handleMint(20)}>Mint</button>
               <Text>Non-Team</Text>
-              <button onClick={() => handleMint(20)}>Mint</button>
               
             </Flex>
           </Grid>

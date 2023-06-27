@@ -352,6 +352,16 @@ input, textarea {
   background-color: white;
 }
 
+.actualMintButton{
+  border: 2px solid white;
+  box-shadow: 4px 4px black;
+  padding: 2px 0px;
+  width: 144px;
+  color: green;
+  background-color: white;
+  font-weight: bold;
+}
+
 .pmButton {
   width:  32px;
   height: 32px;
