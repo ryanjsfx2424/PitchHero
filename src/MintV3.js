@@ -339,12 +339,14 @@ const Mint = (trait) => {
       console.log("iii: ", iii)
       while (needsNewToken) {
         tokenId = tokenIdOptions[Math.floor(Math.random() * tokenIdOptions.length)];
+        console.log("tokenId: ", tokenId);
         if (tokenIds.includes(tokenId)) {
           continue
         }
         needsNewToken = await SmartContractObj.tokensMinted(String(tokenId));
       }
       tokenIds.push(tokenId);
+      needsNewToken = true;
     }
     console.log("tokenIds: ", tokenIds);
 
